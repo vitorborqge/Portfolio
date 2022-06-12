@@ -2,7 +2,7 @@
 !(function($) {
   "use strict";
 
-  // Hero typed
+  // Tipo Hero
   if ($('.typed').length) {
     var typed_strings = $(".typed").data('typed-items');
     typed_strings = typed_strings.split(',')
@@ -15,7 +15,7 @@
     });
   }
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
+  // Rolagem suave para o menu de navegação e links com classes .scrollto
   $(document).on('click', '.nav-menu a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
@@ -42,7 +42,7 @@
     }
   });
 
-  // Activate smooth scroll on page load with hash links in the url
+  // Ative a rolagem suave no carregamento da página com links de hash no URL
   $(document).ready(function() {
     if (window.location.hash) {
       var initial_nav = window.location.hash;
@@ -70,7 +70,7 @@
     }
   });
 
-  // Navigation active state on scroll
+  // Estado ativo de navegação na rolagem
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav');
 
@@ -93,7 +93,7 @@
     });
   });
 
-  // Back to top button
+  // Botão voltar ao topo
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
@@ -115,7 +115,7 @@
     time: 1000
   });
 
-  // Skills section
+  // Seção Conhecimentos
   $('.skills-content').waypoint(function() {
     $('.progress .progress-bar').each(function() {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
@@ -124,7 +124,7 @@
     offset: '80%'
   });
 
-  // Porfolio isotope and filter
+  // Porfolio isótopo e filtro
   $(window).on('load', function() {
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
@@ -141,13 +141,13 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
+    // Iniciar venobox (recurso lightbox usado no portofilo)
     $(document).ready(function() {
       $('.venobox').venobox();
     });
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
+  // Recomendação carrossel (usa a biblioteca Carrossel Owl )
   $(".testimonials-carousel").owlCarousel({
     autoplay: true,
     dots: true,
@@ -165,7 +165,7 @@
     }
   });
 
-  // Portfolio details carousel
+  // Detalhes Carrossel Portfolio 
   $(".portfolio-details-carousel").owlCarousel({
     autoplay: true,
     dots: true,
@@ -173,7 +173,7 @@
     items: 1
   });
 
-  // Init AOS
+  // Iniciar AOS
   function aos_init() {
     AOS.init({
       duration: 1000,
